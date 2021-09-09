@@ -45,3 +45,39 @@ const image = ShareImage.get({
 
 console.log(image)
 ```
+
+## Parameters
+There are only 3 Required Parameters and several optional params.
+### Required Parameters
+|    Parameter    |  Type  |                  Description                  |
+| :-------------: | :----: | :-------------------------------------------: |
+|     `title`     | String |                 Title of Text                 |
+|   `cloudName`   | String |         Name of your Cloudinary Cloud         |
+| `imagePublicID` | String | Public Id of Your Image including Folder Name |
+### Optional Parameters
+|      Parameter       |  Type   |          Default           |                            Description                             |
+| :------------------: | :-----: | :------------------------: | :----------------------------------------------------------------: |
+|      `tagline`       | String  |            None            |                 Tagline of Website or Tags of Post                 |
+|     `titleFont`      | String  |           futura           |                           Font of Title                            |
+|  `titleExtraConfig`  | String  |            `''`            |                         Extra Title Config                         |
+| `taglineExtraConfig` | String  |            `''`            |                      Extra Config of Tagline                       |
+| `cloudinaryUrlBase`  | String  | https://res.cloudinary.com |                       URL Base of Cloudinary                       |
+|    `taglineFont`     | String  |           arial            |                          Font of Tagline                           |
+|     `imageWidth`     | Number |            1280            |                           Width of Image                           |
+|    `imageHeight`     | Number |            669             |                          Height of Image                           |
+|   `textAreaWidth`    | Number |            760             |                         Width of TextArea                          |
+|   `textLeftOffset`   | Number |            480             |                        Left Offset of Text                         |
+|    `titleGravity`    | String  |        `south_west`        |                          Gravity of Title                          |
+|   `taglineGravity`   | String  |        `north_west`        |                         Gravity of Tagline                         |
+|  `titleLeftOffset`   | Number |            None            |                        Left Offset of Title                        |
+| `taglineLeftOffset`  | Number |            None            |                       Left Offset of Tagline                       |
+| `titleBottomOffset`  | Number |            254             |                       Bottom Offset of Title                       |
+|  `taglineTopOffset`  | Number |            445             |                       Top Offset of Tagline                        |
+|     `textColor`      | String  |          `000000`          |                           Color of Text                            |
+|     `titleColor`     | String  |            None            |  Color of Title (If not provided `textColor` will be used instead  |
+|    `taglineColor`    | String  |            None            | Color of Tagline (If not provided `textColor` will be used instead |
+|   `titleFontSize`    | Number |             64             |                         Font Size of Title                         |
+|  `taglineFontSize`   | Number |             48             |                        Font Size of Tagline                        |
+
+**Note**: If you don't provide Tagline, Parameters with `tagline` Prefix will be ignored.  
+We may add more Customization to **ShareImage** in the Future.
