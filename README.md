@@ -11,11 +11,11 @@ pip install ShareImage
 ### Node.js
 To Install ShareImage in Node.js with *NPM* Run:
 ```sh
-npm i @zype/shareimage --save
+npm i shareimage --save
 ```
 Or, with *Yarn*:
 ```sh
-yarn add @zype/shareimage
+yarn add shareimage
 ```
 ## Usage
 Using ShareImage is a bit different across Languages.
@@ -35,7 +35,7 @@ print(image)
 ### Node.js
 Use the Following Code to Generate a Image and output it's URL in Node.js:
 ```js
-const ShareImage = require('@zype/shareimage')
+const ShareImage = require('shareimage')
 
 const image = ShareImage.get({
     title: "My Test Title",

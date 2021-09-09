@@ -1,5 +1,5 @@
 {
-    "name": "@zype/shareimage",
+    "name": "shareimage",
     "version": "1.0.0-beta",
     "description": "Generate Share Images Dynamically within Code",
     "main": "src/index.js",
