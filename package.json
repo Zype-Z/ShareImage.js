@@ -6,12 +6,9 @@
     "repository": "https://GitHub.com/Zype-Z/ShareImage.js",
     "author": "Zype Inc. <info@zype.cf>",
     "scripts": {
-        "release": "release-it"
+        "release": "npx release-it"
     },
     "license": "MIT",
     "private": false,
-    "dependencies": {
-        "release-it": "^14.11.5",
-        "typescript": "^4.4.2"
-    }
+    "dependencies": {}
 }
