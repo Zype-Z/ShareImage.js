@@ -58,7 +58,7 @@ function get(_a) {
         _b = _a.cloudinaryUrlBase,
         cloudinaryUrlBase = _b === void 0 ? 'https://res.cloudinary.com' : _b,
         _c = _a.titleFont,
-        titleFont = _c === void 0 ? 'arial' : _c,
+        titleFont = _c === void 0 ? 'futura' : _c,
         _d = _a.titleExtraConfig,
         titleExtraConfig = _d === void 0 ? '' : _d,
         _e = _a.taglineExtraConfig,
