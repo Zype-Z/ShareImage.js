@@ -1,19 +1,22 @@
 {
-    "name": "shareimage",
-    "version": "1.2.0",
-    "description": "Generate Share Images Dynamically within Code",
-    "main": "./src/index.js",
-    "module": "./src/index.mjs",
-    "exports": {
-        "import": "./src/index.mjs",
-        "require": "./src/index.js"
-    },
-    "repository": "https://GitHub.com/Zype-Z/ShareImage.js",
-    "author": "Zype Inc. <info@zype.cf>",
-    "scripts": {
-        "release": "npx release-it"
-    },
-    "license": "MIT",
-    "private": false,
-    "dependencies": {}
+  "name": "shareimage",
+  "version": "1.2.0",
+  "description": "Generate Share Images Dynamically within Code",
+  "main": "./src/index.js",
+  "module": "./src/index.mjs",
+  "exports": {
+    "import": "./src/index.mjs",
+    "require": "./src/index.js"
+  },
+  "repository": "https://GitHub.com/Zype-Z/ShareImage.js",
+  "author": "Zype Inc. <info@zype.cf>",
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {},
+  "devDependencies": {
+    "semantic-release": "^17.4.7"
+  }
 }
