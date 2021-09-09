@@ -1,5 +1,3 @@
-"use strict";
-
 /**
  * @typedef Config
  * @prop {string} title
@@ -28,8 +26,6 @@
  * @prop {number} [taglineFontSize]
  * @prop {string} [version]
  */
-exports.__esModule = true;
-exports.get = get;
 /**
  * Encodes characters for Cloudinary URL
  * Encodes some not allowed in Cloudinary parameter values twice:
@@ -39,7 +35,7 @@ exports.get = get;
  * @param {string} text
  * @return {string}
  */
-function cleanText(text) {
+export function cleanText(text) {
     return encodeURIComponent(text).replace(/%(23|2C|2F|3F|5C)/g, '%25$1');
 }
 /**
@@ -50,7 +46,7 @@ function cleanText(text) {
  * @param {Config} config
  * @return {string}
  */
-function get(_a) {
+export default function get(_a) {
     var title = _a.title,
         tagline = _a.tagline,
         cloudName = _a.cloudName,
@@ -141,4 +137,3 @@ function get(_a) {
     // join all the parts into a valid URL to the generated image
     return validParts.join('/');
 }
-exports["default"] = get;
