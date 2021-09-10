@@ -13,8 +13,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 12
-      - name: Install dependencies
+          node-version: 14
+      - name: Install Dependencies
+        run: npm i
+      - name: Start CI
         run: npm ci
       - name: Release
         env:
