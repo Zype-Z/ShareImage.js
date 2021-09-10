@@ -1,4 +1,11 @@
 /**
+ * Copyright Zype Inc.
+ * ===================
+ * ShareImage
+ * ===================
+ */
+
+/**
  * @typedef Config
  * @prop {string} title
  * @prop {string} [tagline]
