@@ -53,7 +53,7 @@ export function cleanText(text) {
  * @returns {string}
  */
 export function makeTags(tags) {
-    return `# ${tags.join(' #')}`;
+    return `#${tags.join(' #')}`;
 }
 
 /**
