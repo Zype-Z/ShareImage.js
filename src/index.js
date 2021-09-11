@@ -60,7 +60,7 @@ function cleanText(text) {
  * @returns {string}
  */
 function makeTags(tags) {
-    return `# ${tag.join(' #')}`;
+    return `# ${tags.join(' #')}`;
 }
 
 /**
