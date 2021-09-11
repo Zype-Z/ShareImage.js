@@ -35,6 +35,7 @@
  * @prop {number} [taglineFontSize]
  * @prop {string} [version]
  */
+exports.cleanText = cleanText;
 exports.__esModule = true;
 exports.get = get;
 /**
