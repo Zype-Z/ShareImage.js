@@ -35,9 +35,12 @@
  * @prop {number} [taglineFontSize]
  * @prop {string} [version]
  */
+
 exports.cleanText = cleanText;
+exports.makeTags = makeTags;
 exports.__esModule = true;
 exports.get = get;
+
 /**
  * Encodes characters for Cloudinary URL
  * Encodes some not allowed in Cloudinary parameter values twice:
@@ -50,6 +53,16 @@ exports.get = get;
 function cleanText(text) {
     return encodeURIComponent(text).replace(/%(23|2C|2F|3F|5C)/g, '%25$1');
 }
+
+/**
+ * Creates Tag String from Tags Array!
+ * @param {array} tags 
+ * @returns {string}
+ */
+function makeTags(tags) {
+    return `# ${tag.join(' #')}`;
+}
+
 /**
  * Generates a social sharing image with custom text using Cloudinary’s APIs.
  *
