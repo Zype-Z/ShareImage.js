@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.1...v1.4.2) (2021-09-13)
+
+
+### Fix
+
+* Fixed Semantic Package.json ([bd9a79e](https://github.com/Zype-Z/ShareImage.js/commit/bd9a79e81d26728d9d805db48a7fdb120f5972e0))
+
 ## [1.4.1](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.0...v1.4.1) (2021-09-13)
 
 
