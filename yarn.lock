@@ -893,6 +893,13 @@
     "compare-func" "^2.0.0"
     "q" "^1.5.1"
 
+"conventional-changelog-eslint@^3.0.9":
+  "integrity" "sha512-6NpUCMgU8qmWmyAMSZO5NrRd7rTgErjrm4VASam2u5jrZS0n38V7Y9CzTtLT2qwz5xEChDR4BduoWIr8TfwvXA=="
+  "resolved" "https://registry.npmjs.org/conventional-changelog-eslint/-/conventional-changelog-eslint-3.0.9.tgz"
+  "version" "3.0.9"
+  dependencies:
+    "q" "^1.5.1"
+
 "conventional-changelog-writer@^4.0.0":
   "integrity" "sha512-WwKcUp7WyXYGQmkLsX4QmU42AZ1lqlvRW9mqoyiQzdD+rJWbTepdWoKJuwXTS+yq79XKnQNa93/roViPQrAQgw=="
   "resolved" "https://registry.npmjs.org/conventional-changelog-writer/-/conventional-changelog-writer-4.1.0.tgz"
