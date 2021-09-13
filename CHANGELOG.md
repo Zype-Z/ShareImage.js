@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.2...v1.4.3) (2021-09-13)
+
+
+### Fix
+
+* Fixed Typos ([0448731](https://github.com/Zype-Z/ShareImage.js/commit/0448731c795dfe42497f2369b433f56d165c955a))
+
 ## [1.4.2](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.1...v1.4.2) (2021-09-13)
 
 
