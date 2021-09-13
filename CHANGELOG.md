@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.3...v1.4.4) (2021-09-13)
+
+
+### Fix
+
+* Fixed Plugin Order ([e0c8a2f](https://github.com/Zype-Z/ShareImage.js/commit/e0c8a2f4bc15fa2c555f8b3c3e5e9f97cc04e33b))
+
 ## [1.4.3](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.2...v1.4.3) (2021-09-13)
 
 
