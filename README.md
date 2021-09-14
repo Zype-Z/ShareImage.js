@@ -93,3 +93,4 @@ There are only 3 Required Parameters and several optional params.
 We may add more Customization to **ShareImage** in the Future.
 ## Sponsors
 [![Powered By Vercel](https://res.cloudinary.com/zype/image/upload/ShareImage/powered-by-vercel.png)](https://vercel.com/?utm_source=shimg&utm_campaign=oss)
+[Powered By MacStadium](https://res.cloudinary.com/zype/image/upload/ShareImage/MacStadium)
