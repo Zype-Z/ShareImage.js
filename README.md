@@ -6,12 +6,12 @@ There is currently 2 Langauges Supported: **Python** and **Node.js**
 And there is a **API** available to use with your project!
 ### API (Beta)
 The API is currently in beta and may have some issues.
-The domain of the API is https://api.shareimage.zype.cf/v1
+The domain of the API is https://shimg.zype.cf/v1
 #### Endpoints
 There is currently only one endpoint available:
 ##### GET `/image`
 It needs Query Params in the following format:
-https://api.shareimage.zype.cf/v1/image?paramName=paramValue
+https://shimg.zype.cf/v1/image?paramName=paramValue
 The paramaters are as same as **Node.js** Params!
 ### Python
 To Install ShareImage in Python with *PIP* Run:
