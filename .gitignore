@@ -1,1 +1,4 @@
+# Packages
 node_modules
+# Lockfiles
+*lock*
