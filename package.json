@@ -1,6 +1,6 @@
 {
     "name": "shareimage",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "description": "Generate Share Images Dynamically within Code",
     "main": "./src/index.js",
     "module": "./src/index.mjs",

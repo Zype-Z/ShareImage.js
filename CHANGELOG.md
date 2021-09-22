@@ -1,3 +1,10 @@
+## [1.4.6](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.5...v1.4.6) (2021-09-22)
+
+
+### Bug Fixes
+
+* **config:** Fixed `release.config.js` file ([a48803e](https://github.com/Zype-Z/ShareImage.js/commit/a48803e0c3e1dd97c015ceee979266165c9170ea))
+
 ## [1.4.5](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.4...v1.4.5) (2021-09-22)
 
 
