@@ -91,6 +91,6 @@ There are only 3 Required Parameters and several optional params.
 **Note**: If you don't provide Tagline, Parameters with `tagline` Prefix will be ignored.  
 We may add more Customization to **ShareImage** in the Future.
 ## Sponsors
-[![Powered By Vercel](https://res.cloudinary.com/zype/image/upload/ShareImage/powered-by-vercel.png)](https://vercel.com/?utm_source=shimg&utm_campaign=oss)
+[![Powered By Vercel](https://res.cloudinary.com/zype/image/upload/ShareImage/powered-by-vercel.png)](https://vercel.com/?utm_source=zypeoss&utm_campaign=oss)
 
 <img src="https://res.cloudinary.com/zype/image/upload/ShareImage/MacStadium" height="44" width="212">
