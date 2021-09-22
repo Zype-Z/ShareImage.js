@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.4...v1.4.5) (2021-09-22)
+
+
+### Fix
+
+* MacStadium Banner in README [skip ci] ([66f7fb2](https://github.com/Zype-Z/ShareImage.js/commit/66f7fb22209f6a73b8020b9d8ab61d4408a80984))
+
 ## [1.4.4](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.3...v1.4.4) (2021-09-13)
 
 
