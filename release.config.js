@@ -17,13 +17,13 @@ module.exports = {
         [
             "@semantic-release/commit-analyzer",
             {
-                preset: "eslint",
+                preset: "angular",
             },
         ],
         [
             "@semantic-release/release-notes-generator",
             {
-                preset: "eslint",
+                preset: "angular",
             },
         ],
         [
