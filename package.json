@@ -16,9 +16,9 @@
     "license": "MIT",
     "private": false,
     "devDependencies": {
-        "@semantic-release/changelog": "6.0.0",
-        "@semantic-release/git": "10.0.0",
+        "@semantic-release/changelog": "6.0.1",
+        "@semantic-release/git": "10.0.1",
         "conventional-changelog-eslint": "3.0.9",
-        "semantic-release": "18.0.0"
+        "semantic-release": "18.0.1"
     }
 }
