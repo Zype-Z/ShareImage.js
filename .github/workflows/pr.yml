@@ -8,7 +8,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: deepakputhraya/action-pr-title@3864bebc79c5f829d25dd42d3c6579d040b0ef16
+      - uses: deepakputhraya/action-pr-title@10f7ff082a0f1239f8cc39ccba39d11f32ca2407
         name: Validate PR Title
         continue-on-error: true
         with:
