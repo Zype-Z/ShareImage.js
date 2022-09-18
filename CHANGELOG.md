@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.7...v1.5.0) (2022-09-18)
+
+
+### Features
+
+* Font support ([975a445](https://github.com/Zype-Z/ShareImage.js/commit/975a44547e8c84a03150aa43530770a396d73204))
+
 ## [1.4.7](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.6...v1.4.7) (2022-09-18)
 
 
