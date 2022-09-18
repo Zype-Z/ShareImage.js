@@ -6,6 +6,7 @@ And there is a **API** available to use with your project!
 ### API (Beta)
 The API is currently in beta and may have some issues.
 The domain of the API is https://shimg.zype.cf/v1
+Currently, the V2 of ShareImage is only available for the Node.JS Library (with CommonJS, ESM and TypeScript support)
 #### Endpoints
 There is currently only one endpoint available:
 ##### GET `/image`
