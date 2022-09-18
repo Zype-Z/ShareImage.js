@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.0...v2.0.1) (2022-09-18)
+
+
+### Bug Fixes
+
+* **deps:** Move TypeScript to Main Dependencies ([01b7a2f](https://github.com/Zype-Z/ShareImage.js/commit/01b7a2f478844def639a061edbc3f4adf286bb22))
+* **deps:** Remove TSC to fix errors ([9c003db](https://github.com/Zype-Z/ShareImage.js/commit/9c003dbee64ee0aa3ee134bb3f5131987256afdf))
+* **workflow:** Fix critical packaging bug ([4309487](https://github.com/Zype-Z/ShareImage.js/commit/4309487366bda9a53a90b66a41a02f99492859a6))
+
 # [2.0.0](https://github.com/Zype-Z/ShareImage.js/compare/v1.5.0...v2.0.0) (2022-09-18)
 
 
