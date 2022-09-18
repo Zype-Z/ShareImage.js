@@ -1,3 +1,10 @@
+## [1.4.7](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.6...v1.4.7) (2022-09-18)
+
+
+### Performance Improvements
+
+* Major Rewrite with CJS, ESM and TS support ([e805696](https://github.com/Zype-Z/ShareImage.js/commit/e805696b70820041e2c8d59b1ee9233f40f2a635))
+
 ## [1.4.6](https://github.com/Zype-Z/ShareImage.js/compare/v1.4.5...v1.4.6) (2021-09-22)
 
 
