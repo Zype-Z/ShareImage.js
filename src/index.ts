@@ -49,8 +49,8 @@ interface outputOptions {
     }
 }
 
-let sirinStencil = new ShareFont("sirin-stencil", "Sirin Stencil", path.join(__dirname, ".fonts", "sirin-stencil.ttf"));
-let arial = new ShareFont("arial", "Arial", path.join(__dirname, ".fonts", "arial.ttf"));
+let sirinStencil = new ShareFont("sirin-stencil", "Sirin Stencil", path.join(__dirname, "assets", "fonts", "sirin-stencil.ttf"));
+let arial = new ShareFont("arial", "Arial", path.join(__dirname, "assets", "fonts", "arial.ttf"));
 
 let defaultOptions: ShareProperties = {
     tagline: "",
