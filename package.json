@@ -15,7 +15,7 @@
         "build:esm": "tsc -p tsconfig.esm.json",
         "build:cjs": "tsc -p tsconfig.cjs.json",
         "build": "npm run build:esm & npm run build:cjs",
-        "semantic-release": "semantic-release"
+        "semantic-release": "npm run build & semantic-release"
     },
     "license": "MIT",
     "private": false,
