@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.1...v2.0.2) (2022-09-18)
+
+
+### Bug Fixes
+
+* Add `dist` to upload built files ([2e5dd2d](https://github.com/Zype-Z/ShareImage.js/commit/2e5dd2d053e35356d0738dd64f80fbfb8e3d2e00))
+
 ## [2.0.1](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.0...v2.0.1) (2022-09-18)
 
 
