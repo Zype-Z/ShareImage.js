@@ -1,3 +1,10 @@
+## [2.0.3](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.2...v2.0.3) (2022-09-18)
+
+
+### Bug Fixes
+
+* **files:** Fix packaging bug ([e13b9a4](https://github.com/Zype-Z/ShareImage.js/commit/e13b9a4c5fb24bf25606ed453c55de680ed0fc44))
+
 ## [2.0.2](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.1...v2.0.2) (2022-09-18)
 
 
