@@ -46,11 +46,11 @@ Use the Following Code to Generate a Image and output it's URL in Node.js:
 ```js
 const ShareImage = require('shareimage')
 
-const image = ShareImage.get({
-    title: "My Test Title",
-    cloudName: "myCloud",
-    imagePublicID: "myFolder/myImage"
-})
+const image = ShareImage.generateImage(
+    "/path/to/image.png",
+    "My awesome title",
+    { type: "datauri" }
+)
 
 console.log(image)
 ```
@@ -60,9 +60,9 @@ There are only 3 Required Parameters and several optional params.
 ### Required Parameters
 |    Parameter    |  Type  |                  Description                  |
 | :-------------: | :----: | :-------------------------------------------: |
-|     `title`     | String |                 Title of Text                 |
-|   `cloudName`   | String |         Name of your Cloudinary Cloud         |
-| `imagePublicID` | String | Public Id of Your Image including Folder Name |
+|   `imagePath`   | String |                 Path of the Image             |
+|     `title`     | String |               Title of the Image              |
+| `outputOptions` | Object |              Options for output               |
 ### Optional Parameters
 |      Parameter       |  Type   |          Default           |                            Description                             |
 | :------------------: | :-----: | :------------------------: | :----------------------------------------------------------------: |
