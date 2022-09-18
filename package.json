@@ -24,8 +24,7 @@
         "@semantic-release/git": "10.0.1",
         "@types/node": "^18.7.18",
         "conventional-changelog-eslint": "3.0.9",
-        "semantic-release": "19.0.3",
-        "tsc": "^2.0.4"
+        "semantic-release": "19.0.3"
     },
     "dependencies": {
         "axios": "^0.27.2",
