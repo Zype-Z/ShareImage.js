@@ -1,6 +1,6 @@
 {
     "name": "shareimage",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "Generate Social Media Preview Images from templates.",
     "main": "./dist/esm/index.js",
     "types": "./dist/types/index.d.ts",
@@ -32,6 +32,6 @@
         "typescript": "^4.8.3"
     },
     "files": [
-        "dist/**/*.{ts|js|map"
+        "dist/**/*.{ts|js|map}"
     ]
 }
