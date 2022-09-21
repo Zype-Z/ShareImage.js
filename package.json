@@ -9,7 +9,7 @@
         "require": "./dist/cjs/index.js",
         "default": "./dist/esm/index.js"
     },
-    "repository": "https://GitHub.com/Zype-Z/ShareImage",
+    "repository": "https://GitHub.com/Zype-Z/ShareImage.js",
     "author": "Zype Inc. <rajdeep@zype.cf>",
     "scripts": {
         "build:esm": "tsc -p tsconfig.esm.json",
