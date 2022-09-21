@@ -49,8 +49,8 @@ interface outputOptions {
     }
 }
 
-let sirinStencil = new ShareFont("sirin-stencil", "Sirin Stencil", path.join(__dirname, "assets", "fonts", "sirin-stencil.ttf"));
-let arial = new ShareFont("arial", "Arial", path.join(__dirname, "assets", "fonts", "arial.ttf"));
+let sirinStencil = new ShareFont("sirin-stencil", "Sirin Stencil", path.join(__dirname, "..", "..", "assets", "fonts", "sirin-stencil.ttf"));
+let arial = new ShareFont("arial", "Arial", path.join(__dirname, "..", "..", "assets", "fonts", "arial.ttf"));
 
 let defaultOptions: ShareProperties = {
     tagline: "",
@@ -66,7 +66,13 @@ let defaultOptions: ShareProperties = {
     taglineFontSize: "48px"
 }
 
-type returnOptions = string | Buffer | void;
+interface Message {
+    type: "MESSAGE" | "ERROR",
+    name: string,
+    message: string
+}
+
+type returnOptions = Promise<string | Buffer | undefined | Message>;
 
 /**
  * @function
@@ -78,7 +84,7 @@ type returnOptions = string | Buffer | void;
  * @return {returnOptions} Base64 URI, Data URI or Buffer. You can also save the file (returns nothing). Depends on `output` param.
  */
 
-function generateImage(src: string | Buffer, title: string, output: outputOptions = { type: "base64" }, props: ShareProperties = defaultOptions): string | Buffer | void {
+function generateImage(src: string | Buffer, title: string, output: outputOptions = { type: "base64" }, props: ShareProperties = defaultOptions): Promise<string | undefined | Buffer | Message> {
     let _src = src;
     let _title = title;
     let _output = output;
@@ -119,7 +125,8 @@ function generateImage(src: string | Buffer, title: string, output: outputOption
 
     let img = new Canvas.Image();
     img.src = _src;
-    img.onload = () => {
+    return new Promise<string | Buffer | undefined | Message>((resolve, reject) => {
+      img.onload = () => {
         registerFont((_titleFont.path as string), { family: _titleFont.name });
         registerFont((_taglineFont.path as string), {family: _taglineFont.name});
         let canvas = Canvas.createCanvas(1280, 669);
@@ -128,30 +135,35 @@ function generateImage(src: string | Buffer, title: string, output: outputOption
         ctx.drawImage(img, 0, 0);
         ctx.fillText(_title, _textLeftOffset, _titleBottomOffset);
         ctx.font = `${_taglineFontSize} ${_taglineFont.name}`
-        ctx.fillText(_tagline, _textLeftOffset, 320)
-        if (output.type === "file") {
+        ctx.fillText(_tagline, _textLeftOffset, 320);
+        if (_output.type === "file") {
           let out = fs.createWriteStream(output.options.file.path);
           let stream = canvas.createPNGStream();
           stream.pipe(out);
           out.on("finish", () => {
               return;
           });
-          return;
-        } else if (output.type == "base64") {
+          return resolve(undefined);
+        } else if (_output.type == "base64") {
           let buf: Buffer = canvas.toBuffer("image/png");
           let b64: string = buf.toString("base64");
-          return b64;
-        } else if (output.type == "datauri") {
+          return resolve(b64);
+        } else if (_output.type == "datauri") {
           let url: string = canvas.toDataURL();
-          return url;
-        } else if (output.type == "buffer") {
+          return resolve(url);
+        } else if (_output.type == "buffer") {
           let buf: Buffer = canvas.toBuffer("image/png");
-          return buf;
+          return resolve(buf);
+        } else {
+          let msg: Message = {type: "ERROR", name: "UNSUPPORTED_TYPE", message: `The output type ${output.type} is not supported by ShareImage`}
+          return resolve(msg);
         }
-    }
+      }
+   });
 }
 
 export {
     generateImage,
     ShareFont
 }
+

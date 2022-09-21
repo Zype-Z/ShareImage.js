@@ -1,0 +1,4 @@
+# Publish ONLY Bundled files
+src
+renovate*
+release.config.js

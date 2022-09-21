@@ -43,11 +43,11 @@ image = ShareImage(
 print(image)
 ```
 ### Node.js
-Use the Following Code to Generate a Image and output it's URL in Node.js:
+Use the Following Code to Generate a Image and output it's URL in Node.js (ES6):
 ```js
-const ShareImage = require('shareimage')
+import ShareImage from 'shareimage';
 
-const image = ShareImage.generateImage(
+const image = await ShareImage.generateImage(
     "/path/to/image.png",
     "My awesome title",
     { type: "datauri" }
@@ -63,35 +63,44 @@ There are only 3 Required Parameters and several optional params.
 | :-------------: | :----: | :-------------------------------------------: |
 |   `imagePath`   | String |                 Path of the Image             |
 |     `title`     | String |               Title of the Image              |
-| `outputOptions` | Object |              Options for output               |
 ### Optional Parameters
+#### `output` Object (3rd parameter)
+| Parameter | Type   | Default  | Description                                                                                                                                             |
+| :-------: | :---:  | :-----:  | :-----------------------------------------------------------------------------------------------------------------------------------------------------: |
+| `type`    | String | `base64` | The format of the output. Can be `buffer`, `datauri`, `base64`, or `file` (Save the file in FS). This option is necessary but comes with default value. |
+| `options` | Object | `{}`     | This option is necessary if `type` is set to `file`. The structure of the `options` Object is `{options: {file: {path: "/file/to/output.png"}}}` |
+
+#### `props` Object (4th parameter)
 |      Parameter       |  Type   |          Default           |                            Description                             |
 | :------------------: | :-----: | :------------------------: | :----------------------------------------------------------------: |
 |      `tagline`       | String  |            None            |                 Tagline of Website or Tags of Post                 |
-|     `titleFont`      | String  |           futura           |                           Font of Title                            |
+|     `titleFont`      |ShareFont|       `sirin-stencil`      |                           Font of Title                            |
 |  `titleExtraConfig`  | String  |            `''`            |                         Extra Title Config                         |
 | `taglineExtraConfig` | String  |            `''`            |                      Extra Config of Tagline                       |
-| `cloudinaryUrlBase`  | String  | https://res.cloudinary.com |                       URL Base of Cloudinary                       |
-|    `taglineFont`     | String  |           arial            |                          Font of Tagline                           |
-|     `imageWidth`     | Number |            1280            |                           Width of Image                           |
-|    `imageHeight`     | Number |            669             |                          Height of Image                           |
-|   `textAreaWidth`    | Number |            760             |                         Width of TextArea                          |
-|   `textLeftOffset`   | Number |            480             |                        Left Offset of Text                         |
+|    `taglineFont`     |ShareFont|           arial            |                          Font of Tagline                           |
+|     `imageWidth`     | Number  |            1280            |                           Width of Image                           |
+|    `imageHeight`     | Number  |            669             |                          Height of Image                           |
+|   `textAreaWidth`    | Number  |            760             |                         Width of TextArea                          |
+|   `textLeftOffset`   | Number  |            480             |                        Left Offset of Text                         |
 |    `titleGravity`    | String  |        `south_west`        |                          Gravity of Title                          |
 |   `taglineGravity`   | String  |        `north_west`        |                         Gravity of Tagline                         |
-|  `titleLeftOffset`   | Number |            None            |                        Left Offset of Title                        |
-| `taglineLeftOffset`  | Number |            None            |                       Left Offset of Tagline                       |
-| `titleBottomOffset`  | Number |            254             |                       Bottom Offset of Title                       |
-|  `taglineTopOffset`  | Number |            445             |                       Top Offset of Tagline                        |
+|  `titleLeftOffset`   | Number  |            None            |                        Left Offset of Title                        |
+| `taglineLeftOffset`  | Number  |            None            |                       Left Offset of Tagline                       |
+| `titleBottomOffset`  | Number  |            254             |                       Bottom Offset of Title                       |
+|  `taglineTopOffset`  | Number  |            445             |                       Top Offset of Tagline                        |
 |     `textColor`      | String  |          `000000`          |                           Color of Text                            |
 |     `titleColor`     | String  |            None            |  Color of Title (If not provided `textColor` will be used instead  |
 |    `taglineColor`    | String  |            None            | Color of Tagline (If not provided `textColor` will be used instead |
-|   `titleFontSize`    | Number |             64             |                         Font Size of Title                         |
-|  `taglineFontSize`   | Number |             48             |                        Font Size of Tagline                        |
+|   `titleFontSize`    | Number  |             64             |                         Font Size of Title                         |
+|  `taglineFontSize`   | Number  |             48             |                        Font Size of Tagline                        |
 
 **Note**: If you don't provide Tagline, Parameters with `tagline` Prefix will be ignored.  
 We may add more Customization to **ShareImage** in the Future.
 ## Sponsors
+We have been sponsored by **Vercel**, **MacStadium**.  
+Vercel gave us free **Pro Plan** access to host the documentation and other websites.  
+MacStadium gave us free **Mac Mini Server** to host the API and for builds.  
+
 [![Powered By Vercel](https://res.cloudinary.com/zype/image/upload/ShareImage/powered-by-vercel.png)](https://vercel.com/?utm_source=zypeoss&utm_campaign=oss)
 
 <img src="https://res.cloudinary.com/zype/image/upload/ShareImage/MacStadium" height="44" width="212">
