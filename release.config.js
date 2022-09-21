@@ -33,7 +33,7 @@ module.exports = {
             }
         ],
         [
-          "@semantic-release/npm"
+          "@semantic-release/npm",
             {
                "pkgRoot": "./dist"
             }
