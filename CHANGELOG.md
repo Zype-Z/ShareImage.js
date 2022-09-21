@@ -1,3 +1,11 @@
+## [2.0.6](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.5...v2.0.6) (2022-09-21)
+
+
+### Bug Fixes
+
+* fix ([23a9a75](https://github.com/Zype-Z/ShareImage.js/commit/23a9a756244cc47c99db79e58579338572cb585b))
+* Fix ([7ff15e7](https://github.com/Zype-Z/ShareImage.js/commit/7ff15e7eded0de3f856c1d31c632026a81fc97cd))
+
 ## [2.0.5](https://github.com/Zype-Z/ShareImage.js/compare/v2.0.4...v2.0.5) (2022-09-21)
 
 
