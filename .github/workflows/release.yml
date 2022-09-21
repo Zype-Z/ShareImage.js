@@ -18,10 +18,16 @@ jobs:
         run: npm i
       - name: Start CI
         run: npm ci
-      - name: Debug Issues
-        run: ls -la
+      - name: Do pre-packing
+        run: |
+          npm run build
+          cp package.json dist/
+          cp CHANGELOG.md dist/
+          cp LICENSE dist/
+          cp README.md dist/
+          cp -r assets dist/assets
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: ls -la && npx semantic-release --branches main
+        run: npx semantic-release --branches main
