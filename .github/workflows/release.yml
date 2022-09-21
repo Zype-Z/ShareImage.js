@@ -18,6 +18,8 @@ jobs:
         run: npm i
       - name: Start CI
         run: npm ci
+      - name: Debug Issues
+        run: ls -la
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
