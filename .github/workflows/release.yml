@@ -16,14 +16,14 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - name: Install Dependencies
-        run: npm i && npm ci
+        run: npm i && npm ci && yarn
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+          yarn config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           npm deprecate shareimage ""
-          npm publish --access public
+          yarn publish --access public
           npm deprecate shareimage "Due to security and other issues, this package will be published (v1 API WON'T be re-published) with the new name @formpod/shareimage"
