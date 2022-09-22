@@ -32,10 +32,10 @@
         "typescript": "^4.8.3"
     },
     "files": [
-        "./dist/**/*.{ts|js|map}",
+        "dist/**/*.{ts|js|map}",
         "CHANGELOG.md",
         "README.md",
         "LICENSE",
-        "./assets/**/*.{ttf|woff|woff2}"
+        "assets/**/*.{ttf|woff|woff2}"
     ]
 }
