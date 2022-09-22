@@ -22,7 +22,7 @@ jobs:
           NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
         run: |
-          yarn deprecate shareimage ""
+          npm deprecate shareimage ""
           yarn config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           yarn pack
           yarn publish --access public
