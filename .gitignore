@@ -2,6 +2,3 @@
 node_modules
 # Lockfiles
 *lock*
-
-# Avoid pushing built files to Git
-dist

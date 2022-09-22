@@ -2,3 +2,4 @@
 src
 renovate*
 release.config.js
+tsconfig*
