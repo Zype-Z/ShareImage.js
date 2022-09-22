@@ -1,0 +1,74 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js help ci
+
+PATH: 
+  /home/rajdeep/.fly/bin:/opt/jetbrains-toolbox-1.22.10970:/usr/bin:/home/rajdeep/.nvm/versions/node/v16.13.2/bin:/home/rajdeep/.cargo/bin:/home/rajdeep/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/local/go/bin:/usr/local/go/bin:/home/rajdeep/go/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  17.3.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: Failed to replace env in config: ${NPM_TOKEN}
+      at /usr/share/yarn/lib/cli.js:94933:13
+      at String.replace (<anonymous>)
+      at envReplace (/usr/share/yarn/lib/cli.js:94928:16)
+      at Function.normalizeConfig (/usr/share/yarn/lib/cli.js:31938:69)
+      at NpmRegistry.<anonymous> (/usr/share/yarn/lib/cli.js:31968:34)
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "shareimage",
+      "version": "2.0.6",
+      "description": "Generate Social Media Preview Images from templates. (Depreciated)",
+      "main": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts",
+      "exports": {
+          "import": "./dist/esm/index.js",
+          "require": "./dist/cjs/index.js",
+          "default": "./dist/esm/index.js"
+      },
+      "repository": "https://GitHub.com/Zype-Z/ShareImage.js",
+      "author": "Zype Inc. <rajdeep@zype.cf>",
+      "scripts": {
+          "build:esm": "tsc -p tsconfig.esm.json",
+          "build:cjs": "tsc -p tsconfig.cjs.json",
+          "build": "npm run build:esm & npm run build:cjs",
+          "prepack": "npm run build",
+          "semantic-release": "semantic-release"
+      },
+      "license": "MIT",
+      "private": false,
+      "devDependencies": {
+          "@semantic-release/changelog": "6.0.1",
+          "@semantic-release/git": "10.0.1",
+          "@types/node": "^18.7.18",
+          "conventional-changelog-eslint": "3.0.9",
+          "semantic-release": "19.0.3"
+      },
+      "dependencies": {
+          "canvas": "^2.9.3",
+          "typescript": "^4.8.3"
+      },
+      "files": [
+          "./dist/*.{ts|js|map}",
+          "CHANGELOG.md",
+          "README.md",
+          "LICENSE",
+          "./assets/**/*.{ttf|woff|woff2}"
+      ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
