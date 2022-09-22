@@ -4,26 +4,26 @@ on:
     branches:
       - main
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  release:
+    name: Release
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          node-version: 16
-      - run: npm i && npm ci
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-          registry-url: https://registry.npmjs.org/
-      - run: npm i && npm ci && npm publish --access public && npm deprecate shareimage "This package is no longer maintained as this name. It'll be re-published as @formpod/shareimage instead."
+          node-version: 14
+      - name: Install Dependencies
+        run: npm i && npm ci
+      - name: Release
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
+        run: |
+          yarn deprecate shareimage ""
+          yarn config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
+          yarn pack
+          yarn publish --access public
+          npm deprecate shareimage "Due to security and other issues, this package will be published (v1 API WON'T be re-published) with the new name @formpod/shareimage"
