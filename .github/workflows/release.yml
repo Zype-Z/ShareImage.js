@@ -23,9 +23,7 @@ jobs:
         with:
           node-version: 15
           registry-url: https://registry.npmjs.org/
-      - run: npm i
-      - run: npm ci
-      - run: npm publish --access public && npm deprecate shareimage "This package is no longer maintained as this name. It'll be re-published as @formpod/shareimage instead."
+      - run: npm i && npm ci && npm publish --access public && npm deprecate shareimage "This package is no longer maintained as this name. It'll be re-published as @formpod/shareimage instead."
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
