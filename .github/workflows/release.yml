@@ -18,7 +18,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm i
-       - name: Start CI
+      - name: Start CI
         run: npm ci
       - name: Release
         env:
