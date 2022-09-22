@@ -14,9 +14,11 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: 14
-      - name: Install Dependencies
+      - name: Install Dependencies and Authenticate
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npm i
-      - name: Start CI
+       - name: Start CI
         run: npm ci
       - name: Release
         env:
