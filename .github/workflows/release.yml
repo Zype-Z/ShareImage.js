@@ -23,7 +23,7 @@ jobs:
           NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
         run: |
+          npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           npm deprecate shareimage ""
-          #npm config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           npm publish --access public
           npm deprecate shareimage "Due to security and other issues, this package will be published (v1 API WON'T be re-published) with the new name @formpod/shareimage"
