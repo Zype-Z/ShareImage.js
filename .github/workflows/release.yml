@@ -16,8 +16,6 @@ jobs:
           node-version: 14
       - name: Install Dependencies
         run: yarn
-      - name: Start CI
-        run: yarn ci
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
