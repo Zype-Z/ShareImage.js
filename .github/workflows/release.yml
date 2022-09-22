@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: 14
       - name: Install Dependencies
-        run: yarn
+        run: npm i
       - name: Start CI
         run: npm ci
       - name: Release
