@@ -2,12 +2,12 @@
     "name": "shareimage",
     "version": "2.0.6",
     "description": "Generate Social Media Preview Images from templates.",
-    "main": "./esm/index.js",
-    "types": "./types/index.d.ts",
+    "main": "./dist/esm/index.js",
+    "types": "./dist/types/index.d.ts",
     "exports": {
-        "import": "./esm/index.js",
-        "require": "./cjs/index.js",
-        "default": "./esm/index.js"
+        "import": "./dist/esm/index.js",
+        "require": "./dist/cjs/index.js",
+        "default": "./dist/esm/index.js"
     },
     "repository": "https://GitHub.com/Zype-Z/ShareImage.js",
     "author": "Zype Inc. <rajdeep@zype.cf>",
@@ -31,7 +31,7 @@
         "typescript": "^4.8.3"
     },
     "files": [
-        "./**/*.{ts|js|map}",
+        "./dist/*.{ts|js|map}",
         "CHANGELOG.md",
         "README.md",
         "LICENSE",

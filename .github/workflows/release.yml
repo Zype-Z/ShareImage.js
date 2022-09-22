@@ -1,6 +1,6 @@
 name: Release
 on:
-  workflow_dispatch:
+  push:
     branches:
       - main
 jobs:
@@ -15,19 +15,14 @@ jobs:
         with:
           node-version: 14
       - name: Install Dependencies
-        run: npm i
+        run: yarn
       - name: Start CI
         run: npm ci
-      - name: Do pre-packing
-        run: |
-          npm run build
-          cp package.json dist/
-          cp CHANGELOG.md dist/
-          cp LICENSE dist/
-          cp README.md dist/
-          cp -r assets dist/assets
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release --branches main
+        run: |
+          yarn pack
+          yarn publish *.tgz
+          npm depreciate "Due to security and other issues, this package will be published (v1 API WON'T be re-published) with the new name @formpod/shareimage"
