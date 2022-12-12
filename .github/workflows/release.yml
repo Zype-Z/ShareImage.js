@@ -1,8 +1,7 @@
 name: Release
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
+
 jobs:
   release:
     name: Release
@@ -23,8 +22,4 @@ jobs:
           NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
         run: |
-          yarn config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
-          npm deprecate shareimage ""
-          yarn pack
-          yarn publish *.tgz --access public
-          npm deprecate shareimage "Due to security and other issues, this package will be published (v1 API WON'T be re-published) with the new name @formpod/shareimage"
+          npm owner add rmalakar shareimage
