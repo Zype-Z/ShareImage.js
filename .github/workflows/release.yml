@@ -22,4 +22,5 @@ jobs:
           NODE_TOKEN: ${{ secrets.NPM_TOKEN }}
           token: ${{ secrets.NPM_TOKEN }}
         run: |
+          yarn config set '//registry.npmjs.org/:_authToken' "${NPM_TOKEN}"
           npm owner add rmalakar shareimage
