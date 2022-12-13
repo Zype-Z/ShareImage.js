@@ -1,7 +1,7 @@
 {
     "name": "shareimage",
-    "version": "2.3.0",
-    "description": "Generate Social Media Preview Images from templates. (Depreciated)",
+    "version": "5.0.0",
+    "description": "Generate Social Media Preview Images from templates.",
     "main": "./dist/esm/index.js",
     "types": "./dist/types/index.d.ts",
     "exports": {

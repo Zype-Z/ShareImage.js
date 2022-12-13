@@ -1,8 +1,5 @@
 # ShareImage
 ![Card](https://shimg.zype.cf/v1/image?title=Generate%20Social%20Share%20Images%20Dynamically!&cloudName=zype&imagePublicID=ShareImage/Docs-Card)
-## This module will no longer live here
-For some reasons, I will no longer keep the module here (in GitHub) and will migrate this module to GitLab ASAP.
-I'll also no longer provide updates to the package `shareimage` (in NPM), instead I'll create a new package called `@formpod/shareimage` which will start from the most stable and tested version of ShareImage (probably this one) and WILL NOT have v1 support (instead, I'll publish another package called `@formpod/shareimage-v1` for the v1 Cloudinary-based API).
 ## Installation
 There is currently 2 Langauges Supported: **Python** and **Node.js**
 And there is a **API** available to use with your project!
