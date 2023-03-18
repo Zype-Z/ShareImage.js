@@ -45,7 +45,7 @@ print(image)
 ### Node.js
 Use the Following Code to Generate a Image and output it's URL in Node.js (ES6):
 ```js
-import ShareImage from 'shareimage';
+import * as ShareImage from 'shareimage';
 
 const image = await ShareImage.generateImage(
     "/path/to/image.png",
@@ -57,11 +57,11 @@ console.log(image)
 ```
 
 ## Parameters
-There are only 3 Required Parameters and several optional params.
+There are only 2 Required Parameters and several optional params.
 ### Required Parameters
 |    Parameter    |  Type  |                  Description                  |
 | :-------------: | :----: | :-------------------------------------------: |
-|   `imagePath`   | String |                 Path of the Image             |
+|   `src`         | String |              URL/Buffer of the Image          |
 |     `title`     | String |               Title of the Image              |
 ### Optional Parameters
 #### `output` Object (3rd parameter)

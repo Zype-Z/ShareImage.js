@@ -1,3 +1,13 @@
+# 5.1.0
+
+### Bug Fixes
+
+* Fixed a bug which made it not working in ES6.
+
+### Less Dependencies
+
+* Replaced the existing compiler (TSC) with `tsup`, which is faster and smaller.
+
 # 5.0.0
 
 ### Features

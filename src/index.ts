@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
-import * as Canvas from 'canvas';
+import * as Canvas from "canvas";
+import * as url from "url";
 
 let { registerFont } = Canvas;
 
@@ -48,7 +49,6 @@ interface outputOptions {
         }
     }
 }
-
 let sirinStencil = new ShareFont("sirin-stencil", "Sirin Stencil", path.join(__dirname, "..", "..", "assets", "fonts", "sirin-stencil.ttf"));
 let arial = new ShareFont("arial", "Arial", path.join(__dirname, "..", "..", "assets", "fonts", "arial.ttf"));
 
