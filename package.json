@@ -23,11 +23,11 @@
     "license": "MIT",
     "private": false,
     "devDependencies": {
-        "@semantic-release/changelog": "6.0.1",
+        "@semantic-release/changelog": "6.0.2",
         "@semantic-release/git": "10.0.1",
         "@types/node": "^18.7.18",
         "conventional-changelog-eslint": "3.0.9",
-        "semantic-release": "19.0.3",
+        "semantic-release": "19.0.5",
 	"tsup": "^6.6.3"
     },
     "dependencies": {
