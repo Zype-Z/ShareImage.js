@@ -162,8 +162,100 @@ function generateImage(src: string | Buffer, title: string, output: outputOption
    });
 }
 
-export {
-    generateImage,
-    ShareFont
+class ImageGenerator {
+    src: string | Buffer;
+    title: string;
+    output: outputOptions;
+    props: ShareProperties;
+
+    constructor(src: string | Buffer, title: string, output: outputOptions = { type: "base64" }, props: ShareProperties = defaultOptions) {
+        this.src = src;
+        this.title = title;
+        this.output = output;
+        this.props = props;
+    }
+
+    generate(): Promise<string | undefined | Buffer | Message> {
+        let _src = this.src;
+        let _title = this.title;
+        let _output = this.output;
+        let {
+            tagline = "",
+            titleFont = sirinStencil,
+            taglineFont = arial,
+            titleColor = "",
+            taglineColor,
+            imageWidth = 1280,
+            imageHeight = 669,
+            textAreaWidth,
+            textLeftOffset = 480,
+            titleBottomOffset = 254,
+            titleGravity,
+            taglineGravity,
+            textColor = "000000",
+            titleFontSize = "64px",
+            taglineFontSize = "48px"
+        } = this.props;
+
+        var
+            _tagline = tagline,
+            _titleFont = titleFont,
+            _taglineFont = taglineFont,
+            _titleColor = titleColor,
+            _taglineColor = taglineColor,
+            _imageWidth = imageWidth,
+            _imageHeight = imageHeight,
+            _textAreaWidth = textAreaWidth,
+            _textLeftOffset = textLeftOffset,
+            _titleBottomOffset = titleBottomOffset,
+            _titleGravity = titleGravity,
+            _taglineGravity = taglineGravity,
+            _textColor = textColor,
+            _titleFontSize = titleFontSize,
+            _taglineFontSize = taglineFontSize;
+
+        let img = new Canvas.Image();
+        img.src = _src;
+        return new Promise<string | Buffer | undefined | Message>((resolve, reject) => {
+          img.onload = () => {
+            registerFont((_titleFont.path as string), { family: _titleFont.name });
+            registerFont((_taglineFont.path as string), {family: _taglineFont.name});
+            let canvas = Canvas.createCanvas(1280, 669);
+            let ctx = canvas.getContext("2d");
+            ctx.font = `${_titleFontSize} ${_titleFont.name}`
+            ctx.drawImage(img, 0, 0);
+            ctx.fillText(_title, _textLeftOffset, _titleBottomOffset);
+            ctx.font = `${_taglineFontSize} ${_taglineFont.name}`
+            ctx.fillText(_tagline, _textLeftOffset, 320);
+            if (_output.type === "file") {
+              let out = fs.createWriteStream(_output.options.file.path);
+              let stream = canvas.createPNGStream();
+              stream.pipe(out);
+              out.on("finish", () => {
+                  return;
+              });
+              return resolve(undefined);
+            } else if (_output.type == "base64") {
+              let buf: Buffer = canvas.toBuffer("image/png");
+              let b64: string = buf.toString("base64");
+              return resolve(b64);
+            } else if (_output.type == "datauri") {
+              let url: string = canvas.toDataURL();
+              return resolve(url);
+            } else if (_output.type == "buffer") {
+              let buf: Buffer = canvas.toBuffer("image/png");
+              return resolve(buf);
+            } else {
+              let msg: Message = {type: "ERROR", name: "UNSUPPORTED_TYPE", message: `The output type ${_output.type} is not supported by ShareImage`}
+              return resolve(msg);
+            }
+          }
+       });
+    }
 }
 
+export {
+    generateImage,
+    ShareFont,
+    ImageGenerator
+}
