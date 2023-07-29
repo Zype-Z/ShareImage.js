@@ -162,12 +162,22 @@ function generateImage(src: string | Buffer, title: string, output: outputOption
    });
 }
 
+/**
+ * The SImage class provides an object-oriented way to generate images.
+ */
 class SImage {
     src: string | Buffer;
     title: string;
     output: outputOptions;
     props: ShareProperties;
 
+    /**
+     * Constructs an instance of the SImage class.
+     * @param {string | Buffer} src - The source file. Can be `Buffer`, `dataURI` or `URL`.
+     * @param {string} title - The title of the ShareImage.
+     * @param {outputOptions} output - The output format of the image. Defaults to "base64".
+     * @param {ShareProperties} props - Additional properties of the image. Defaults to `defaultOptions`.
+     */
     constructor(src: string | Buffer, title: string, output: outputOptions = { type: "base64" }, props: ShareProperties = defaultOptions) {
         this.src = src;
         this.title = title;
@@ -175,6 +185,10 @@ class SImage {
         this.props = props;
     }
 
+    /**
+     * Generates an image based on the instance variables of the SImage class.
+     * @return {Promise<string | undefined | Buffer | Message>} A promise that resolves to a Base64 URI, Data URI, or Buffer. You can also save the file (resolves to undefined). Depends on the `output` instance variable.
+     */
     generate(): Promise<string | undefined | Buffer | Message> {
         let _src = this.src;
         let _title = this.title;
