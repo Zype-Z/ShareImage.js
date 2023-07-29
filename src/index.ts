@@ -162,7 +162,7 @@ function generateImage(src: string | Buffer, title: string, output: outputOption
    });
 }
 
-class ImageGenerator {
+class SImage {
     src: string | Buffer;
     title: string;
     output: outputOptions;
@@ -257,5 +257,5 @@ class ImageGenerator {
 export {
     generateImage,
     ShareFont,
-    ImageGenerator
+    SImage
 }
