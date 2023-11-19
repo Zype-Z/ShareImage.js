@@ -28,7 +28,7 @@
         "@types/node": "^20.0.0",
         "conventional-changelog-eslint": "5.0.0",
         "semantic-release": "22.0.8",
-	"tsup": "^7.0.0"
+	"tsup": "^8.0.0"
     },
     "dependencies": {
         "canvas": "^2.9.3",
