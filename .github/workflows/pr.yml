@@ -19,7 +19,7 @@ jobs:
           # min_length: 5 # Min length of the title
           max_length: 50 # Max length of the title
           github_token: ${{ secrets.GITHUB_TOKEN }} # Default: ${{ github.token }}
-      - uses: mshick/add-pr-comment@7c0890544fb33b0bdd2e59467fbacb62e028a096
+      - uses: mshick/add-pr-comment@dd126dd8c253650d181ad9538d8b4fa218fc31e8
         name: Comment on PR
         if: ${{ failure() }}
         env:
