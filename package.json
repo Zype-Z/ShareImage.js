@@ -27,7 +27,7 @@
         "@semantic-release/git": "10.0.1",
         "@types/node": "^24.0.0",
         "conventional-changelog-eslint": "6.1.0",
-        "semantic-release": "25.0.5",
+        "semantic-release": "25.0.6",
 	"tsup": "^8.0.0"
     },
     "dependencies": {
